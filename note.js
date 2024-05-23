@@ -158,3 +158,31 @@ let objFromEntries = Object.fromEntries(arrEntries); // { a: 1, b: 2 }
 // Returns a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).
 let hasProp = obj.hasOwnProperty('a'); // true
 
+
+
+
+
+
+
+
+
+
+
+// Standard function declaration
+// This function is hoisted, meaning it can be called before its declaration in the code.
+function functionName() {
+  // Function body
+}
+
+// Function expression
+// Here, a function is assigned to a variable. This function is not hoisted, so it cannot be called before its assignment.
+functionName = function() {
+  // Function body
+};
+
+// Arrow function expression
+// An arrow function is a shorter syntax for a function expression. It does not have its own 'this' context,
+// meaning it inherits 'this' from the surrounding code. This function is also not hoisted.
+functionName = () => {
+  // Function body
+};
